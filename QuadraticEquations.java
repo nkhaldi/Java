@@ -5,10 +5,8 @@
 
 import java.util.Scanner;
 
-public class QuadraticEquations
-{
-	public static void main(String[] args)
-	{
+public class QuadraticEquations {
+	public static void main(String[] args) {
 		Scanner scan = new Scanner( System.in );
 
 		System.out.println("Enter parameter of:");
@@ -30,8 +28,7 @@ public class QuadraticEquations
 			System.out.println("No solutions!");
 	}
 
-	public static void solveQuadric(double a, double b, double c)
-	{
+	public static void solveQuadric(double a, double b, double c) {
 		double diskr = b * b - 4 * a * c;
 
 		if (diskr >= 0)
@@ -40,8 +37,7 @@ public class QuadraticEquations
 			solveComplex(a, b, diskr);
 	}
 
-	public static void solveReal(double a, double b, double diskr)
-	{
+	public static void solveReal(double a, double b, double diskr) {
 		diskr = Math.sqrt(diskr);
 		double x1 = (-b - diskr) / (2 * a);
 		double x2 = (-b + diskr) / (2 * a);
@@ -53,8 +49,7 @@ public class QuadraticEquations
 		System.out.printf("x2 = %.2f\n", x2);
 	}
 
-	public static void solveComplex(double a, double b, double diskr)
-	{
+	public static void solveComplex(double a, double b, double diskr) {
 		double alpha = -b / (2*a);
 		double beta = Math.sqrt(-diskr) / (2*a);
 
@@ -62,16 +57,14 @@ public class QuadraticEquations
 		System.out.printf("x1 = %.2f - %.2fi\n", alpha, beta);
 	}
 
-	public static void solveLinear(double b, double c)
-	{
+	public static void solveLinear(double b, double c) {
 		double x = -c / b;
 		System.out.printf("x = %.2f\n", x);
 	}
 
-	public static void printEqution(double a, double b, double c)
-	{
+	public static void printEqution(double a, double b, double c) {
 			if (a == 0)
-				Pass();
+				pass();
 			else
 				if (a == 1)
 					System.out.print("x^2");
@@ -81,7 +74,7 @@ public class QuadraticEquations
 					System.out.printf("%.2fx^2", a);
 
 			if (b == 0)
-				Pass();
+				pass();
 			else
 				if (a != 0)
 					if (b == 1)
@@ -102,7 +95,7 @@ public class QuadraticEquations
 
 			if (a != 0 || b != 0)
 				if (c == 0)
-					Pass();
+					pass();
 				else if (c > 0)
 					System.out.printf(" + %.2f", c);
 				else
@@ -116,8 +109,7 @@ public class QuadraticEquations
 		return args[0];
 	}
 
-	public static void Pass()
-	{
+	public static void pass() {
 		return;
 	}
 }
