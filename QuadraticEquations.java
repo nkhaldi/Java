@@ -19,7 +19,7 @@ public class QuadraticEquations {
         double c = scan.nextDouble();
         System.out.println();
 
-        printEqution(a, b, c);
+        printEquation(a, b, c);
         if (a != 0)
             solveQuadric(a, b, c);
         else if (b != 0)
@@ -62,7 +62,7 @@ public class QuadraticEquations {
         System.out.printf("x = %.2f\n", x);
     }
 
-    public static void printEqution(double a, double b, double c) {
+    public static void printEquation(double a, double b, double c) {
             if (a == 0)
                 pass();
             else
